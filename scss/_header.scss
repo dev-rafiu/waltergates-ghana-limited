@@ -1,6 +1,7 @@
-.top-header .container {
+.top-header .container-fluid {
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+  // background: hotpink;
 }
 
 .menu-btn,
@@ -9,11 +10,11 @@
   color: var(--clr-gray);
 }
 
-@media (max-width: 50em) {
+@media (max-width: 48em) {
   .menu-btn {
     position: absolute;
     z-index: 9999;
-    top: 2.3rem;
+    top: 2rem;
     right: 2rem;
   }
   .menu-btn {
@@ -25,11 +26,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 1.3rem;
+  gap: 1rem;
   background-color: var(--clr-dark-red);
-  padding: 1rem;
+  padding: 0.5rem 1.3rem;
 
-  @media (max-width: 50em) {
+  @media (max-width: 48em) {
     & {
       position: fixed;
       inset: 0 0 0 40%;
@@ -49,11 +50,15 @@
 
   a {
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 0.875rem;
     font-weight: 700;
     color: var(--clr-gray);
     transition: color 0.25s ease;
+
+    &.active {
+      color: var(--clr-dark-red-hover);
+    }
 
     @media (hover: hover) {
       &:hover {
@@ -61,12 +66,9 @@
       }
     }
 
-    @media (min-width: 50em) {
+    @media (min-width: 48em) {
       & {
         color: var(--clr-white);
-      }
-      &.active {
-        color: var(--clr-dark-red-hover);
       }
     }
   }

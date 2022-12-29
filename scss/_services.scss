@@ -1,0 +1,25 @@
+.services {
+  .cta {
+    text-decoration: none;
+    text-transform: capitalize;
+    gap: 0.3rem;
+    background: var(--clr-dark-red);
+    width: max-content;
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    transition: color 0.25s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background: hsl(356, 77%, 50%);
+      }
+    }
+  }
+  p {
+    color: var(--clr-gray);
+  }
+
+  .mission p {
+    max-width: 500px;
+  }
+}

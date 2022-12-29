@@ -18,6 +18,18 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--clr-white);
   font-family: var(--font-family);
@@ -28,14 +40,19 @@ ul {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 .flex {
   display: flex;
   align-items: center;
 }
 
-.container {
-  width: min(93%, 1400px);
+.container-fluid {
+  width: min(95%, 1400px);
   margin: 0 auto;
+  // background: tomato;
 }
 
 button {

@@ -1,0 +1,20 @@
+.contact {
+  form,
+  .address .row {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  // form {
+  //   background: yellow;
+  // }
+
+  .row p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    color: var(--clr-dark-red);
+  }
+}
