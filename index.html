@@ -27,7 +27,7 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <header class="top-header">
+    <header id="primary-header" class="primary-header">
       <div class="container-fluid flex">
         <!-- logo -->
         <div id="logo">
@@ -87,7 +87,36 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container-fluid d-flex">
-        <div class="socials-container">
+        <div class="address">
+          <div class="my-2">
+            <i class="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+            <span>
+              Glorygate House, Gulf Hills, <br />
+              Achimota, Accra
+            </span>
+          </div>
+
+          <div class="my-3">
+            <i class="fa-solid fa-phone"></i>
+            <span> +233 (0) 30 243 8468 </span>
+          </div>
+          <div class="my-3">
+            <i class="fa-solid fa-phone"></i>
+            <span> +233 (0) 20 181 3106 </span>
+          </div>
+          <div class="">
+            <i class="fa-solid fa-envelope icon" aria-hidden="true"></i>
+            <span>
+              <a href="mailto:  info@wgghana.com"> info@wgghana.com</a>
+            </span>
+          </div>
+          <div class="my-3">
+            <i class="fa-regular fa-map"></i>
+            <span>Ghana Post GPS:GA-248-3236</span>
+          </div>
+        </div>
+        <!-- socials -->
+        <div class="socials-container mt-4 mb-5">
           <ul class="socials-list flex">
             <li class="twitter">
               <a
@@ -127,11 +156,13 @@
             </li>
           </ul>
         </div>
-        <p class="copyright-text">
-          Copyright © <span></span> Waltergates Ghana Limited
-        </p>
       </div>
-      <div class="top-link"></div>
+      <p class="copyright-text">
+        Copyright © <span></span> Waltergates Ghana Limited
+      </p>
+      <div class="scroll-to-top">
+        <a href="#primary-header"><i class="fa-solid fa-angle-up"></i></a>
+      </div>
     </footer>
 
     <!-- bootstrap -->

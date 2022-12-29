@@ -7,11 +7,13 @@ menuBtn.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
 
   if (visibility === "false") {
+    document.body.style.overflowY = "hidden";
     primaryNav.setAttribute("data-visible", true);
     menuBtn.setAttribute("aria-expanded", true);
     openMenu.style.display = "none";
     closeMenu.style.display = "block";
   } else if (visibility === "true") {
+    document.body.style.overflowY = "scroll";
     primaryNav.setAttribute("data-visible", false);
     menuBtn.setAttribute("aria-expanded", false);
     closeMenu.style.display = "none";

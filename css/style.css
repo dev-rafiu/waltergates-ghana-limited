@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -65,7 +69,7 @@ button {
   object-fit: contain;
 }
 
-.top-header .container-fluid {
+.primary-header .container-fluid {
   justify-content: space-between;
   gap: 1rem;
 }
@@ -74,13 +78,14 @@ button {
 .close-menu {
   display: none;
   color: var(--clr-gray);
+  font-size: 2rem;
 }
 
 @media (max-width: 48em) {
   .menu-btn {
     position: absolute;
     z-index: 9999;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
   }
   .menu-btn {
@@ -97,11 +102,14 @@ button {
 }
 @media (max-width: 48em) {
   .primary-navigation {
+    gap: 1.5rem;
     position: fixed;
-    inset: 0 0 0 40%;
+    z-index: 999;
+    inset: 0 0 0 30%;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     background: var(--clr-white);
-    padding: min(30vh, 10rem) 3em;
+    background: black;
+    padding: min(10vh, 5rem) 2em;
     align-items: flex-start;
     flex-direction: column;
     transform: translateX(100%);
@@ -114,22 +122,25 @@ button {
 .primary-navigation a {
   text-decoration: none;
   text-transform: capitalize;
-  font-size: 0.875rem;
   font-weight: 700;
+  font-size: 1.1rem;
   color: var(--clr-gray);
   transition: color 0.25s ease;
 }
 .primary-navigation a.active {
   color: var(--clr-dark-red-hover);
+  color: lightgray;
 }
 @media (hover: hover) {
   .primary-navigation a:hover {
     color: var(--clr-dark-red-hover);
+    color: lightgray;
   }
 }
 @media (min-width: 48em) {
   .primary-navigation a {
     color: var(--clr-white);
+    font-size: 0.875rem;
   }
 }
 
@@ -234,20 +245,39 @@ button {
 }
 
 .footer {
-  background: var(--clr-dark);
-  color: var(--clr-white);
-  padding: 2rem 0;
-  text-align: center;
+  background: black;
+  color: var(--clr-gray);
+  padding: 3rem 0;
+  position: relative;
 }
 .footer .container-fluid {
-  gap: 1.3rem;
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 48em) {
+.footer .address > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.footer .address > div a {
+  color: inherit;
+}
+.footer .address span {
+  line-height: 1.2;
+}
+.footer .address i {
+  font-size: 1.2rem;
+}
+@media (min-width: 50em) {
   .footer .container-fluid {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5rem;
+  }
+  .footer .address > div {
+    justify-content: flex-start;
+    gap: 0.5rem;
   }
 }
 .footer .socials-list {
@@ -255,8 +285,8 @@ button {
   gap: 0.5rem;
 }
 .footer .socials-list li {
-  padding: 0.5rem 0.8rem;
-  background: #000;
+  padding: 0.3rem 0.8rem;
+  background: var(--clr-dark);
 }
 @media (hover: hover) {
   .footer .socials-list li.twitter:hover {
@@ -277,7 +307,18 @@ button {
   color: var(--clr-white);
 }
 .footer .copyright-text {
-  color: var(--clr-white);
   font-size: 0.9rem;
   word-spacing: 3px;
+  text-align: center;
+}
+.footer .scroll-to-top {
+  border: 1px solid var(--clr-gray);
+  width: max-content;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 0.5rem 0.8rem;
+}
+.footer .scroll-to-top a {
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */

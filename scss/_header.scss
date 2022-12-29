@@ -1,20 +1,20 @@
-.top-header .container-fluid {
+.primary-header .container-fluid {
   justify-content: space-between;
   gap: 1rem;
-  // background: hotpink;
 }
 
 .menu-btn,
 .close-menu {
   display: none;
   color: var(--clr-gray);
+  font-size: 2rem;
 }
 
 @media (max-width: 48em) {
   .menu-btn {
     position: absolute;
     z-index: 9999;
-    top: 2rem;
+    top: 1.5rem;
     right: 2rem;
   }
   .menu-btn {
@@ -32,11 +32,14 @@
 
   @media (max-width: 48em) {
     & {
+      gap: 1.5rem;
       position: fixed;
-      inset: 0 0 0 40%;
+      z-index: 999;
+      inset: 0 0 0 30%;
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
       background: var(--clr-white);
-      padding: min(30vh, 10rem) 3em;
+      background: black;
+      padding: min(10vh, 5rem) 2em;
       align-items: flex-start;
       flex-direction: column;
       transform: translateX(100%);
@@ -51,24 +54,27 @@
   a {
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 0.875rem;
     font-weight: 700;
+    font-size: 1.1rem;
     color: var(--clr-gray);
     transition: color 0.25s ease;
 
     &.active {
       color: var(--clr-dark-red-hover);
+      color: lightgray;
     }
 
     @media (hover: hover) {
       &:hover {
         color: var(--clr-dark-red-hover);
+        color: lightgray;
       }
     }
 
     @media (min-width: 48em) {
       & {
         color: var(--clr-white);
+        font-size: 0.875rem;
       }
     }
   }
