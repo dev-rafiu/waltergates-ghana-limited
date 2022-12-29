@@ -64,14 +64,15 @@ button {
 }
 
 .logo-image {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 3rem;
   object-fit: contain;
 }
 
 .primary-header .container-fluid {
   justify-content: space-between;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 .menu-btn,
@@ -85,7 +86,7 @@ button {
   .menu-btn {
     position: absolute;
     z-index: 9999;
-    top: 1.5rem;
+    top: 1rem;
     right: 2rem;
   }
   .menu-btn {
